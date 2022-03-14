@@ -1,3 +1,46 @@
-# vitejs-vite-ydehkd
+# Vitejs CSS transform question
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-ydehkd)
+```html
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vite App</title>
+	<script type="module" crossorigin="" src="/assets/index.9dbcbbb2.js"></script>
+	<link rel="stylesheet" href="/assets/index.2e0f046f.css">
+</head>
+
+<body class="vsc-initialized">
+	<div id="app">
+		<!-- Cat here for "npm run dev" and "npm run build && npm run preview" -->
+		<div id="one"></div>
+		<!-- Cat NOT here when "npm run build && npm run preview" -->
+		<link rel="stylesheet" href="https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css">
+		<div id="two"></div>
+	</div>
+</body>
+
+</html>
+```
+
+Contents of `<link rel="stylesheet" href="/assets/index.2e0f046f.css">`:
+
+```css
+#one{width:200px;height:200px;border:5px solid red;background:url(/assets/catcat.c8195ece.jpg) red;background-size:cover}
+```
+
+Contents of `<link rel="stylesheet" href="https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css">`:
+
+```css
+#two {
+  width: 200px;
+  height: 200px;
+  border: 5px solid blue;
+  background: url(./nested/catcat.jpg) blue;
+  background-size: cover;
+}
+```
+
+> Is it expected that `style2.1d59c5eb.css` becomes a hashed file but contents are not transformed unlike `index.2e0f046f.css`?
