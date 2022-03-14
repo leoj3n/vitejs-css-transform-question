@@ -25,13 +25,13 @@
 </html>
 ```
 
-Contents of `<link rel="stylesheet" href="/assets/index.2e0f046f.css">`:
+`/assets/index.2e0f046f.css`:
 
 ```css
 #one{width:200px;height:200px;border:5px solid red;background:url(/assets/catcat.c8195ece.jpg) red;background-size:cover}
 ```
 
-Contents of `<link rel="stylesheet" href="https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css">`:
+`https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css`:
 
 ```css
 #two {
