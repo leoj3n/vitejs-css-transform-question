@@ -43,4 +43,24 @@ Contents of `<link rel="stylesheet" href="https://node-kn5aaq--4173.local.webcon
 }
 ```
 
-> Is it expected that `style2.1d59c5eb.css` becomes a hashed file but contents are not transformed unlike `index.2e0f046f.css`?
+## Question
+
+For `style2.css` included like this:
+
+```js
+const url = new URL('./style2.css', import.meta.url).href;
+
+document.querySelector('#app').innerHTML = `
+  <link rel="stylesheet" href="${url}">
+`;
+```
+
+Is it expected that `style2.1d59c5eb.css` becomes a hashed file but contents are not transformed?
+
+Note that for `style.css` included like that:
+
+```js
+import './style.css';
+```
+
+File contents are transformed (background url points to hashed jpg).
