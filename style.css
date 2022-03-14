@@ -5,5 +5,3 @@
   background: url(./nested/catcat.jpg) red;
   background-size: cover;
 }
-
-@import url(./style3.css);
