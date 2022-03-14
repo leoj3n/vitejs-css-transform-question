@@ -25,24 +25,6 @@
 </html>
 ```
 
-`/assets/index.2e0f046f.css`:
-
-```css
-#one{width:200px;height:200px;border:5px solid red;background:url(/assets/catcat.c8195ece.jpg) red;background-size:cover}
-```
-
-`https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css`:
-
-```css
-#two {
-  width: 200px;
-  height: 200px;
-  border: 5px solid blue;
-  background: url(./nested/catcat.jpg) blue;
-  background-size: cover;
-}
-```
-
 ## Question
 
 For `style2.css` included like this:
@@ -57,6 +39,18 @@ document.querySelector('#app').innerHTML = `
 
 Is it expected that `style2.1d59c5eb.css` becomes a hashed file but contents are not transformed?
 
+`https://node-kn5aaq--4173.local.webcontainer.io/assets/style2.1d59c5eb.css`:
+
+```css
+#two {
+  width: 200px;
+  height: 200px;
+  border: 5px solid blue;
+  background: url(./nested/catcat.jpg) blue;
+  background-size: cover;
+}
+```
+
 Note that for `style.css` included like that:
 
 ```js
@@ -64,3 +58,9 @@ import './style.css';
 ```
 
 File contents are transformed (background url points to hashed jpg).
+
+`/assets/index.2e0f046f.css`:
+
+```css
+#one{width:200px;height:200px;border:5px solid red;background:url(/assets/catcat.c8195ece.jpg) red;background-size:cover}
+```
